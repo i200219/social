@@ -1,0 +1,107 @@
+import mongoose from "mongoose";
+const userIds =[
+    new mongoose.Types.ObjectId(),
+    new mongoose.Types.ObjectId(),
+    new mongoose.Types.ObjectId(),
+    new mongoose.Types.ObjectId(),
+    new mongoose.Types.ObjectId(),
+    new mongoose.Types.ObjectId(),
+    new mongoose.Types.ObjectId(),
+    new mongoose.Types.ObjectId(),
+];
+
+export const users = [
+    {
+        _id: userIds[0],
+        firstName: "John",
+        lastName: "Doe",
+        email: "wC7z6@example.com",
+        password: "12345",
+        picturePath: "p1.jpeg",
+        friends: [],
+        location: "San Fran",
+        occupation: "Software Engineer",
+        viewedProfile: 14561,
+        impressions: 888822,
+        createdAt: 1115211422,
+        updatedAt: 1115211422,
+        __v: 0,
+    },
+    {
+        _id: userIds[1],
+        firstName: "Jane",
+        lastName: "Doe",
+        email: "I1HqT@example.com",
+        password: "12345",
+        picturePath: "p2.jpeg",
+        friends: [],
+        location: "San Fran",
+        occupation: "Software Engineer",
+        viewedProfile: 12351,
+        impressions: 55555,
+        createdAt: 1115211422,
+        updatedAt: 1115211422,
+        __v: 0,
+    },
+    {
+        _id: userIds[2],
+        firstName: "Will",
+        lastName: "Smith",
+        email: "I8N6T@example.com",
+        password: "12345",
+        picturePath: "p3.jpeg",
+        friends: [],
+        location: "San Fran",
+        occupation: "Software Engineer",
+        viewedProfile: 45468,
+        impressions: 1999,
+        createdAt: 1115211422,
+        updatedAt: 1115211422,
+        __v: 0,
+    },
+] 
+
+export const posts = [
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[1],
+        firstName: "Jane",
+        lastName: "Doe",
+        location: "San Fran",
+        description: "test",
+        picturePath: "p1.jpeg",
+        userPicturePath: "p3.jpeg",
+        likes: new Map([
+            [userIds[0], true],
+            [userIds[2], true],
+            [userIds[3], true],
+        ]),
+        comments: [
+            "random comment",
+            "another random comment",
+            "yet another random comment",
+        ],
+    },
+    {
+        _id: new mongoose.Types.ObjectId(),
+        userId: userIds[2],
+        firstName: "Will",
+        lastName: "Smith",
+        location: "San Fran",
+        description: "test",
+        picturePath: "p4.jpeg",
+        userPicturePath: "p3.jpeg",
+        likes: new Map([
+            [userIds[1], true],
+            [userIds[3], true],
+            [userIds[0], true],
+        ]),
+        comments: [
+            "random comment",
+            "another random comment",
+            "yet another random comment",
+        ],
+    },
+
+]
+
